@@ -62,6 +62,7 @@ a {
     column-gap: 0.33%;
     column-width: 33%;
     justify-items: center;
+    align-items: center;
 }
 
 .logo {
