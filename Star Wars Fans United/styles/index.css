@@ -26,6 +26,19 @@ main {
     color: rgb(219, 204, 121);
 }
 
+#content-home {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+    text-align: center;
+}
+
+p {
+    font-size: 125%;;
+}
+
 footer {
     position: fixed;
     left: 0%;
@@ -39,6 +52,7 @@ footer {
 a {
     color: rgb(0, 0, 0);
     text-decoration: none;
+    font-size: 175%;
 }
 
 .header, .footer {
@@ -50,7 +64,6 @@ a {
 }
 
 .logo {
-    float: left;
     grid-column-start: 1;
     grid-column-end: 2;
     height: 110%;
@@ -58,13 +71,16 @@ a {
 }
 
 .title {
-    float: center;
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
 .links {
-    float: right;
     grid-column-start: 3;
     grid-column-end: 4;
+}
+
+.info {
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
