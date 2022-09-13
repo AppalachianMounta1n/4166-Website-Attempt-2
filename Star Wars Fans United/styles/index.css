@@ -61,6 +61,7 @@ a {
     grid-template-rows: 1;
     column-gap: 0.33%;
     column-width: 33%;
+    justify-items: center;
 }
 
 .logo {
@@ -68,16 +69,20 @@ a {
     grid-column-end: 2;
     height: 110%;
     top: 1%;
+    justify-self: start;
 }
 
 .title {
     grid-column-start: 2;
     grid-column-end: 3;
+    justify-self: end;
 }
 
 .links {
     grid-column-start: 3;
     grid-column-end: 4;
+    justify-self: end;
+    right: 1%;
 }
 
 .info {
