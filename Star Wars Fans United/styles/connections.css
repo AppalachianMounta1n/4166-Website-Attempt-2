@@ -1,10 +1,11 @@
 @font-face {
-    font-family: 'SF Distant Galaxy';
-    src: url('fonts/SFDistantGalaxy.ttf');
+    font-family: 'Aurebesh';
+    src: url('fonts/Aurebesh');
 }
 
-html {
+@font-face {
     font-family: 'SF Distant Galaxy';
+    src: url('fonts/SFDistantGalaxy');
 }
 
 header {
@@ -26,17 +27,19 @@ main {
     color: rgb(219, 204, 121);
 }
 
-#content-home {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    right: 20%;
-    bottom: 20%;
-    text-align: center;
+nav {
+    font-size: 150%;
 }
 
-p {
-    font-size: 125%;;
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    font-size: 125%;
+    list-style-type: none;
+    color: rgb(219, 204, 121);
 }
 
 footer {
@@ -49,12 +52,6 @@ footer {
     text-align: left;
 }
 
-a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 175%;
-}
-
 .header, .footer {
     display: grid;
     grid-template-columns: 3;
@@ -63,6 +60,7 @@ a {
     column-width: 33%;
     justify-items: center;
     align-items: center;
+    margin-right: 1%;
 }
 
 .logo {
@@ -74,6 +72,7 @@ a {
 }
 
 .title {
+    font-family: SFDistantGalaxy;
     grid-column-start: 2;
     grid-column-end: 3;
     justify-self: end;
@@ -83,10 +82,20 @@ a {
     grid-column-start: 3;
     grid-column-end: 4;
     justify-self: end;
-    right: 1%;
+    right: 2.5%;
 }
 
 .info {
     grid-column-start: 2;
     grid-column-end: 3;
+}
+
+#content {
+    text-align: center;
+}
+
+#categories {
+    display: inline-block;
+    text-align: left;
+    list-style-type: none;
 }
