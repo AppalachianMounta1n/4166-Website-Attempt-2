@@ -83,3 +83,26 @@ footer {
     grid-column-start: 2;
     grid-column-end: 3;
 }
+
+input {
+    background-color: #d3d3d3;
+}
+
+.content {
+    text-align: left;
+    font-size: 125%;
+    margin-left: 40%;
+}
+
+#details {
+    width:22.5%;
+    height: 175px;
+}
+
+#create {
+    background-color: rgb(219, 204, 121);
+    border: none;
+    width: 150px;
+    height: 50px;
+    margin-left: 7.5%;
+}
