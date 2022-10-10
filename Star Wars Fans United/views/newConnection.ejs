@@ -1,0 +1,18 @@
+<%- include('./partials/header.ejs')%>
+        <main>
+            <div class="content">
+                <h1>Create a New Event</h1>
+                <form id="new">
+                    <label for="type">Event Type: <input type="text" id="type"></label><br><br>
+                    <label for="title">Event Title: <input type="text" id="title"></label><br><br>
+                    <label for="hostname">Event Host: <input type="text" id="host"></label><br><br>
+                    <label for="details">Event Details: <input type="text" id="details"></label><br><br>
+                    <label for="location">Event Location: <input type="text" id="location"></label><br><br>
+                    <label for="date">Event Date: <input type="date" id="date"></label><br><br>
+                    <label for="time">Event Time: <input type="time" id="time"></label><br><br>
+
+                    <a href="connections.html"><button type="button" id="create">Create Event</button></a>
+                </form>
+            </div>
+        </main>
+<%- include('./partials/footer.ejs')%>
