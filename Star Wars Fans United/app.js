@@ -3,6 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const connectionRoutes = require('./routes/connectionRoutes.js');
+const mainRoutes = require('./routes/mainRoutes.js');
 
 //create app
 const app = express();
@@ -19,12 +20,8 @@ app.use(morgan('tiny'));
 app.use(methodOverride('_method'));
 
 //routing middleware
+app.use('/', mainRoutes);
 app.use('/connections', connectionRoutes);
-
-//routes
-app.get('/', (req, res) => {
-    res.render('index.ejs');
-});
 
 //error-handling middleware
 app.use((req, res, next) => {

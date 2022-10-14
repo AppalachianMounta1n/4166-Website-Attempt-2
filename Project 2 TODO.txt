@@ -1,7 +1,4 @@
 TODO
-Add Connection Images
-Main Routing
-Main Controller
 Add Contact, About, and Edit Pages
 Fix CSS on New Connection page
 Update EJS for dynamic data rendering
