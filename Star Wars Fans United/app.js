@@ -21,6 +21,11 @@ app.use(methodOverride('_method'));
 //routing middleware
 app.use('/connections', connectionRoutes);
 
+//routes
+app.get('/', (req, res) => {
+    res.render('index.ejs');
+});
+
 //error-handling middleware
 app.use((req, res, next) => {
     let err = new Error('The server cannot locate ' + req.url);
@@ -38,11 +43,6 @@ app.use((err, req, res, next) => { //this must be the last middleware function l
 
     res.status(err.status);
     res.render('error', {error: err});
-});
-
-//routes
-app.get('/', (req, res) => {
-    res.render('index.ejs');
 });
 
 //start server

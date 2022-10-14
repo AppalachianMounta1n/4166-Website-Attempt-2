@@ -6,15 +6,18 @@ const connections = [
         id: uuidv4(),
         title: 'Why Ki-Adi-Mundi Was Both Directly And Indirectly Responsible For Order 66',
         topic: 'Galactic Republic Lore',
+        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         host: 'Lily Gross',
         date: DateTime.now().toLocaleString(DateTime.DATE_MED),
         startTime: '8:00 AM',
-        endTime: '9:00 AM'
+        endTime: '9:00 AM',
+        image: '../public/images/StarWars.png'
     },
     {
         id: uuidv4(),
         title: 'Reasons The Jedi Council Only Utilized Obi-Wan Kenobi And Anakin Skywalker',
         topic: 'Galactic Republic Lore',
+        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         host: 'Lily Gross',
         date: DateTime.now().toLocaleString(DateTime.DATE_MED),
         startTime: '10:00 AM',
@@ -24,6 +27,7 @@ const connections = [
         id: uuidv4(),
         title: 'How Did Palpatine Stay Hidden For So Long?',
         topic: 'Galactic Republic Lore',
+        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         host: 'Lily Gross',
         date: DateTime.now().toLocaleString(DateTime.DATE_MED),
         startTime: '12:00 PM',
@@ -33,6 +37,7 @@ const connections = [
         id: uuidv4(),
         title: 'Reasons The Sith Empire Fell',
         topic: 'Sith Lore',
+        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         host: 'Lily Gross',
         date: DateTime.now().toLocaleString(DateTime.DATE_MED),
         startTime: '2:00 PM',
@@ -42,6 +47,7 @@ const connections = [
         id: uuidv4(),
         title: 'Why The Rule of Two Was Ineffective And Doomed To Fail',
         topic: 'Sith Lore',
+        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         host: 'Lily Gross',
         date: DateTime.now().toLocaleString(DateTime.DATE_MED),
         startTime: '4:00 PM',
@@ -51,6 +57,7 @@ const connections = [
         id: uuidv4(),
         title: 'How Did The Sith Return After Palpatine Was Defeated?',
         topic: 'Sith Lore',
+        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         host: 'Lily Gross',
         date: DateTime.now().toLocaleString(DateTime.DATE_MED),
         startTime: '5:30 PM',
@@ -82,7 +89,6 @@ exports.updateByID = function(id, newConnection) {
         connection.host = newConnection.host;
         connection.startTime = newConnection.startTime;
         connection.endTime = newConnection.endTime;
-        connection.image = newConnection.image;
     }
     else {
         return false;

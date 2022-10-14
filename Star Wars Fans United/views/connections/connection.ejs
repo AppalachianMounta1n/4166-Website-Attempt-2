@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs')%>
+        <main>
+            <div id="content">
+                <h1><%=connection.title%>></h1>
+                <p>Topic: <%=connection.topic%>></p>
+                <p>Host: <%=connection.host%></p>
+                <p>Date: <%=connection.date%></p>
+                <p>Start Time: <%=connection.startTime%></p>
+                <p>End Time: <%=connection.endTime%></p>
+                <h2>Details</h2>
+                <p><%=connection.details%></p>
+                <img src="<%=connection.image%>" alt="There is either no image or the URL is invalid."><br><br>
+                <div class="buttons">
+                    <a href="connections.html"><button type="button" id="update">Update Event</button></a>
+                    <a href="connections.html"><button type="button" id="delete">Delete Event</button></a>
+                </div>
+            </div>
+        </main>
+<%- include('../partials/footer.ejs')%>

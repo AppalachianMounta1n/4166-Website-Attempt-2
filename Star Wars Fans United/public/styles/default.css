@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Aurebesh';
-    src: url('fonts/Aurebesh');
+    src: url('/fonts/Aurebesh');
 }
 
 @font-face {
     font-family: 'SF Distant Galaxy';
-    src: url('fonts/SFDistantGalaxy');
+    src: url('/fonts/SFDistantGalaxy');
 }
 
 header {
