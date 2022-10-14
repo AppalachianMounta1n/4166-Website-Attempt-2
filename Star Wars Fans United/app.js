@@ -21,6 +21,25 @@ app.use(methodOverride('_method'));
 //routing middleware
 app.use('/connections', connectionRoutes);
 
+//error-handling middleware
+app.use((req, res, next) => {
+    let err = new Error('The server cannot locate ' + req.url);
+    err.status = 404;
+    next(err);
+});
+
+app.use((err, req, res, next) => { //this must be the last middleware function loaded
+    console.log(err.stack);
+    
+    if(!err.status) {
+        err.status = 500;
+        err.message = ("Internal Server Error");
+    }
+
+    res.status(err.status);
+    res.render('error', {error: err});
+});
+
 //routes
 app.get('/', (req, res) => {
     res.render('index.ejs');
