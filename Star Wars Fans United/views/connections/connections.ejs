@@ -1,22 +1,30 @@
 <%- include('../partials/header.ejs')%>
         <main>
             <div id="content">
+                <% if (connections.length) { %>
                 <ul id="categories">
                     <li><h1>Galactic Republic Lore Discussions</h1>
                         <ul>
-                            <a href="connections/:id" class="connect-link"><li>Why Ki-Adi-Mundi Was Both Directly And Indirectly Responsible For Order 66</li></a><br>
-                            <a href="connections/:id" class="connect-link"><li>Reasons The Jedi Council Only Utilized Obi-Wan Kenobi And Anakin Skywalker</li></a><br>
-                            <a href="connections/:id" class="connect-link"><li>How Did Palpatine Stay Hidden For So Long?</li></a>
+                            <$ connections.forEach(connection => { %>
+                                <% if(connection.topic == "Galactic Republic Lore Discussions") { %>
+                                    <li class="connect-link"><a href="/connections/<%=connection.id%>"><%=connection.title%></a></li>
+                                <$ }
+                            )}; %>
                         </ul>
                     </li>
                     <li><h1>Sith Lore</h1>
                         <ul>
-                            <a href="connections/:id" class="connect-link"><li>Reasons The Sith Empire Fell</li></a><br>
-                            <a href="connections/:id" class="connect-link"><li>Why The Rule of Two Was Ineffective And Doomed To Fail</li></a><br>
-                            <a href="connections/:id" class="connect-link"><li>How Did The Sith Return After Palpatine Was Defeated?</li></a>
+                            <$ connections.forEach(connection => { %>
+                                <% if(connection.topic == "Sith Lore") { %>
+                                    <li class="connect-link"><a href="/connections/<%=connection.id%>"><%=connection.title%></a></li>
+                                <$ }
+                            )}; %>
                         </ul>
                     </li>
                 </ul>
+                <% } else { %>
+                    <p>There are no connections currently planned.</p>
+                <% }; %>
             </div>
         </main>
 <%- include('../partials/footer.ejs')%>
