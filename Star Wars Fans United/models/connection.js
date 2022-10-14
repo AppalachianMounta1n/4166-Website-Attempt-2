@@ -57,3 +57,46 @@ const connections = [
         endTime: '6:30 PM'
     }
 ];
+
+exports.find = function() {
+    return connections;
+};
+
+exports.findByID = function(id) {
+    return connections.find(connection => connection.id === id);
+};
+
+exports.saveConnection = function(connection) {
+    connection.id = uuidv4();
+    connection.date = DateTime.now().toLocaleString(DateTime.DATE_MED);
+
+    connections.push(connection);
+};
+
+exports.updateByID = function(id, newConnection) {
+    let connection = connections.find(connection => connection.id === id);
+
+    if (connection) {
+        connection.title = newConnection.title;
+        connection.topic = newConnection.topic;
+        connection.host = newConnection.host;
+        connection.startTime = newConnection.startTime;
+        connection.endTime = newConnection.endTime;
+        connection.image = newConnection.image;
+    }
+    else {
+        return false;
+    }
+};
+
+exports.delete = function(id) {
+    let index = connections.findIndex(connection => connection.id === id);
+
+    if(index != -1) {
+        connections.splice(index, 1);
+        return true;
+    }
+    else {
+        return false;
+    }
+};
