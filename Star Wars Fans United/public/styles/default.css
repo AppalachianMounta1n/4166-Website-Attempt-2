@@ -169,10 +169,15 @@ input {
     height: 175px;
 }
 
-#create {
+#create, #edit {
     background-color: rgb(219, 204, 121);
     border: none;
     width: 150px;
     height: 50px;
     margin-left: 7.5%;
+}
+
+#form-content {
+    display: grid;
+    justify-content: left;
 }

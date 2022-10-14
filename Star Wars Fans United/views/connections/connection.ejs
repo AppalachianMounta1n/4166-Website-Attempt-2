@@ -11,8 +11,8 @@
                 <p><%=connection.details%></p>
                 <img src="<%=connection.image%>" alt="There is either no image or the URL is invalid."><br><br>
                 <div class="buttons">
-                    <a href="connections.html"><button type="button" id="update">Update Event</button></a>
-                    <a href="connections.html"><button type="button" id="delete">Delete Event</button></a>
+                    <a href="connections.html"><button type="button" id="update" formmethod="GET" formaction="/connections/<%=connection.id%>/edit">Update Event</button></a>
+                    <a href="connections.html"><button type="button" id="delete" formmethod="POST" formaction="/connections/<%=connection.id%>?_method=DELETE">Delete Event</button></a>
                 </div>
             </div>
         </main>
