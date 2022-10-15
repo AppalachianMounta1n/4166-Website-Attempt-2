@@ -11,7 +11,7 @@ const connections = [
         date: DateTime.now().toLocaleString(DateTime.DATE_MED),
         startTime: '8:00 AM',
         endTime: '9:00 AM',
-        image: '../public/images/StarWars.png'
+        image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipart.info%2Fimages%2Fccovers%2F1513370389Star%2520Wars%2520Logo%2520transparent%2520PNG.png&f=1&nofb=1&ipt=dc4def9837ef507f3cefa74d51853154d42bbed5529c66ed6714ea8ec0c71323&ipo=images'
     },
     {
         id: uuidv4(),
@@ -22,7 +22,7 @@ const connections = [
         date: DateTime.now().toLocaleString(DateTime.DATE_MED),
         startTime: '10:00 AM',
         endTime: '11:00 AM',
-        image: '../public/images/StarWars.png'
+        image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipart.info%2Fimages%2Fccovers%2F1513370389Star%2520Wars%2520Logo%2520transparent%2520PNG.png&f=1&nofb=1&ipt=dc4def9837ef507f3cefa74d51853154d42bbed5529c66ed6714ea8ec0c71323&ipo=images'
     },
     {
         id: uuidv4(),
@@ -33,7 +33,7 @@ const connections = [
         date: DateTime.now().toLocaleString(DateTime.DATE_MED),
         startTime: '12:00 PM',
         endTime: '1:00 PM',
-        image: '../public/images/StarWars.png'
+        image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipart.info%2Fimages%2Fccovers%2F1513370389Star%2520Wars%2520Logo%2520transparent%2520PNG.png&f=1&nofb=1&ipt=dc4def9837ef507f3cefa74d51853154d42bbed5529c66ed6714ea8ec0c71323&ipo=images'
     },
     {
         id: uuidv4(),
@@ -44,7 +44,7 @@ const connections = [
         date: DateTime.now().toLocaleString(DateTime.DATE_MED),
         startTime: '2:00 PM',
         endTime: '3:00 PM',
-        image: '../public/images/StarWars.png'
+        image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipart.info%2Fimages%2Fccovers%2F1513370389Star%2520Wars%2520Logo%2520transparent%2520PNG.png&f=1&nofb=1&ipt=dc4def9837ef507f3cefa74d51853154d42bbed5529c66ed6714ea8ec0c71323&ipo=images'
     },
     {
         id: uuidv4(),
@@ -55,7 +55,7 @@ const connections = [
         date: DateTime.now().toLocaleString(DateTime.DATE_MED),
         startTime: '4:00 PM',
         endTime: '5:00 PM',
-        image: '../public/images/StarWars.png'
+        image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipart.info%2Fimages%2Fccovers%2F1513370389Star%2520Wars%2520Logo%2520transparent%2520PNG.png&f=1&nofb=1&ipt=dc4def9837ef507f3cefa74d51853154d42bbed5529c66ed6714ea8ec0c71323&ipo=images'
     },
     {
         id: uuidv4(),
@@ -66,7 +66,7 @@ const connections = [
         date: DateTime.now().toLocaleString(DateTime.DATE_MED),
         startTime: '5:30 PM',
         endTime: '6:30 PM',
-        image: '../public/images/StarWars.png'
+        image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipart.info%2Fimages%2Fccovers%2F1513370389Star%2520Wars%2520Logo%2520transparent%2520PNG.png&f=1&nofb=1&ipt=dc4def9837ef507f3cefa74d51853154d42bbed5529c66ed6714ea8ec0c71323&ipo=images'
     }
 ];
 

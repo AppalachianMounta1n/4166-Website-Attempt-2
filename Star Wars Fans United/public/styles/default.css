@@ -181,3 +181,8 @@ input {
     display: grid;
     justify-content: left;
 }
+
+#connection-img {
+    width: 250px;
+    height: 150px;
+}

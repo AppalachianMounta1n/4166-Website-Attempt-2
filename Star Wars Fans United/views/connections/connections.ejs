@@ -5,20 +5,20 @@
                 <ul id="categories">
                     <li><h1>Galactic Republic Lore Discussions</h1>
                         <ul>
-                            <$ connections.forEach(connection => { %>
-                                <% if(connection.topic == "Galactic Republic Lore Discussions") { %>
-                                    <li class="connect-link"><a href="/connections/<%=connection.id%>"><%=connection.title%></a></li>
-                                <$ }
-                            )}; %>
+                            <% connections.forEach(connection => { %>
+                                <% if(connection.topic == "Galactic Republic Lore") { %>
+                                    <a href="/connections/<%=connection.id%>"><li class="connect-link"><%=connection.title%></li></a>
+                                <% }
+                                }); %>
                         </ul>
                     </li>
                     <li><h1>Sith Lore</h1>
                         <ul>
-                            <$ connections.forEach(connection => { %>
+                            <% connections.forEach(connection => { %>
                                 <% if(connection.topic == "Sith Lore") { %>
-                                    <li class="connect-link"><a href="/connections/<%=connection.id%>"><%=connection.title%></a></li>
-                                <$ }
-                            )}; %>
+                                    <a href="/connections/<%=connection.id%>"><li class="connect-link"><%=connection.title%></li></a>
+                                <% }
+                                }); %>
                         </ul>
                     </li>
                 </ul>

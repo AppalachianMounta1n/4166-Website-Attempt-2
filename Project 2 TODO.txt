@@ -1,2 +1,0 @@
-TODO
-Update EJS for dynamic data rendering
