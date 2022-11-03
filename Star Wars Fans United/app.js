@@ -2,6 +2,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
+const mongoose = require('mongoose');
 const connectionRoutes = require('./routes/connectionRoutes.js');
 const mainRoutes = require('./routes/mainRoutes.js');
 
@@ -11,7 +12,16 @@ const app = express();
 //configure app
 let port = 3000;
 let host = 'localhost';
+let url = "mongodb://localhost:27017/NBAD"
 app.set('view engine', 'ejs');
+
+//connect and start server
+mongoose.connect(url).then(() => {
+    //start server
+    app.listen(port, host, () => {
+        console.log('The server is running on port', port);
+    });
+}).catch(err => console.log(err.message));
 
 //mount middleware
 app.use(express.static('public'));
@@ -40,9 +50,4 @@ app.use((err, req, res, next) => { //this must be the last middleware function l
 
     res.status(err.status);
     res.render('error', {error: err});
-});
-
-//start server
-app.listen(port, host, () => {
-    console.log('The server is running on port', port);
 });
