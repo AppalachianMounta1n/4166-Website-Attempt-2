@@ -10,10 +10,11 @@
                 <h2>Details</h2>
                 <p><%=connection.details%></p>
                 <img src="<%=connection.image%>" alt="There is either no image or the URL is invalid." id="connection-img"><br><br>
-                <div class="buttons">
-                    <a href="/connections/<%=connection.id%>"><button type="button" id="update" formmethod="GET" formaction="/connections/<%=connection.id%>/edit">Update Event</button></a>
-                    <a href="/connections/<%=connection.id%>"><button type="button" id="delete" formmethod="POST" formaction="/connections/<%=connection.id%>?_method=DELETE">Delete Event</button></a>
-                </div>
+
+                <form>
+                    <button type="submit" id="update" formmethod="GET" formaction="/connections/<%=connection.id%>/edit">Update Event</button>
+                    <button type="submit" id="delete" formmethod="POST" formaction="/connections/<%=connection.id%>?_method=DELETE">Delete Event</button>
+                </form>
             </div>
         </main>
 <%- include('../partials/footer.ejs')%>

@@ -11,9 +11,9 @@ exports.new = (req, res) => {
 };
 
 //POST /connections - post a new connection to the site
-exports.create = (req, res) => {
+exports.create = (req, res, next) => {
     let connection = new model(req.body); //create document
-    connection.save().then((connection) => res.redirect('./connections')).catch(err => {
+    connection.save().then((connection) => res.redirect('/connections')).catch(err => {
         if (err.name === "ValidationError") {
             err.status = 400;
         }
@@ -50,9 +50,9 @@ exports.edit = (req, res, next) => {
         return next(err);
     };
 
-    let connection = model.findByID(id).then(connection => {
+    model.findById(id).then(connection => {
         if (connection) {
-            res.render('./connections/editConnection.ejs', {connection});
+            res.render('./connections/editConnection', {connection});
         } else {
             let err = new Error('The server could not find the connection with ID: ' + id);
             err.status = 404;
@@ -98,7 +98,7 @@ exports.delete = (req, res, next) => {
 
     model.findByIdAndDelete(id, {useFindAndModify: false}).then(connection => {
         if (connection) {
-            res.redirect('./connections/connections.ejs');
+            res.redirect('./connections');
         } else {
             let err = new Error('The server could not find the connection with ID: ' + id);
             err.status = 404;
