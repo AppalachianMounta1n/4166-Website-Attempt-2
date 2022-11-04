@@ -12,7 +12,7 @@
                     <label for="endTime">Event Start Time: <input type="time" id="time" name="endTime" value="<%=connection.endTime%>" required></label><br><br>
                     <label for="imageURL">Image URL: <input type="url" name="image" id="image" value="<%=connection.image%>" required></label><br><br>
 
-                    <button type="submit" id="create" formmethod="POST" formaction="/connections/<%=connection.id%>">Submit</button>
+                    <input type="submit" id="create" value = "Submit">
                 </form>
             </div>
         </main>
