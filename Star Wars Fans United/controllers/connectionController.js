@@ -73,7 +73,7 @@ exports.update = (req, res, next) => {
 
     model.findByIdAndUpdate(id, connection, {findAndModify: false, runValidators: true}).then(connection => {
         if (connection) {
-            res.redirect('./connections/' + id);
+            res.redirect('/connections/' + id);
         } else {
             let err = new Error('The server could not find the connection with ID: ' + id);
             err.status = 404;
@@ -98,7 +98,7 @@ exports.delete = (req, res, next) => {
 
     model.findByIdAndDelete(id, {useFindAndModify: false}).then(connection => {
         if (connection) {
-            res.redirect('./connections');
+            res.redirect('/connections');
         } else {
             let err = new Error('The server could not find the connection with ID: ' + id);
             err.status = 404;
