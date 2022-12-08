@@ -14,7 +14,12 @@
             <nav class="links">
                 <a href="/connections/new">New Connection</a>
                 <a href="/connections">Connections</a>
-                <a href="#">Login</a>
-                <a href="#">Sign Up</a>
+                <%if(!user) {%>
+                    <a href="/users/login">Login</a>
+                    <a href="/users/new">Sign Up</a>
+                <%} else {%>
+                    <a href="/users/profile">Profile</a>
+                    <a href="/users/logout">Log Out</a>
+                <%}%>
             </nav>
         </header>
