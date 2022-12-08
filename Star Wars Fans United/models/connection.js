@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const connectionSchema = new Schema({
     title: {type: String, required: [true, 'All connections must have a title.']},
-    host: {type: String, required: [true, 'All connections must have a host.']},
+    host: {type: Schema.Types.ObjectId, ref: 'User', required: [true, 'All connections must have a host.']},
     topic: {type: String, required: [true, 'All connections must have a topic.']},
     details: {type: String, required: [true, 'All connections must have a description.']},
     date: {type: String, required: [true, 'All connections must have a date.']}, //Regex to validate the date format

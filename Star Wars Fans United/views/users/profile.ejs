@@ -1,12 +1,14 @@
 <%- include('../partials/header.ejs')%>
-<div id="content">
-    <h2><%= user.firstName%> <%= user.lastName%></h2>
-    <% if (connections.length) {%>
-        <p>Hosting The Following Events</p>
-        <% connections.forEach(connection => {%>
-            <a href="'/connections/<%= connection.id%>"><p><%= connection.title%></p></a>
-        <%}); } else {%>
-            <p>You are not hosting any events.</p>
-       <% }%>
-</div>
+<main>
+    <div id="content">
+        <h2><%= user.firstName%> <%= user.lastName%></h2>
+        <% if (connections.length) {%>
+            <p>Hosting The Following Events</p>
+            <% connections.forEach(connection => {%>
+                <a href="'/connections/<%= connection.id%>"><p><%= connection.title%></p></a>
+            <%}); } else {%>
+                <p>You are not hosting any events.</p>
+           <% }%>
+    </div>
+</main>
 <%- include('../partials/footer.ejs')%>

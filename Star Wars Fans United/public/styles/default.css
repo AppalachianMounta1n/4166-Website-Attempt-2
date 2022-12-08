@@ -40,15 +40,6 @@ a {
     color: rgb(219, 204, 121);
 }
 
-#aurebesh {
-    display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 1;
-    column-gap: 2%;
-    column-width: 50%;
-    align-items: center;
-}
-
 #content-home-left {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -127,15 +118,6 @@ footer {
     list-style-type: none;
 }
 
-#buttons {
-    display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 1;
-    column-gap: 10%;
-    column-width: 50%;
-    align-items: center;
-}
-
 #update {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -185,4 +167,22 @@ input {
 #connection-img {
     width: 250px;
     height: 150px;
+}
+
+#aurebesh {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+    column-gap: 2%;
+    column-width: 50%;
+    align-items: center;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+    column-gap: 10%;
+    column-width: 50%;
+    align-items: center;
 }
