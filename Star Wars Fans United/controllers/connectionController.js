@@ -14,7 +14,7 @@ exports.new = (req, res) => {
 exports.create = (req, res, next) => {
     let connection = new model(req.body); //create document
     connection.host = req.session.user;
-    connection.save().then((connection) => {
+    connection.save().then(connection => {
         req.flash('success', 'Event created successfully!');
         res.redirect('/connections');
     }).catch(err => {

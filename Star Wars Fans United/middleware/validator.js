@@ -19,7 +19,7 @@ exports.validateLogin = [body('email', 'Must be a valid email address.').isEmail
 exports.validateConnection = [body('topic', 'Topic cannot be empty.').notEmpty().trim().escape(), body('title', 'Title cannot be empty.').notEmpty().trim().escape(), 
                                 body('details', 'Details cannot be empty.').notEmpty().trim().escape(), body('date', 'Date cannot be empty.').notEmpty().trim().escape(), 
                                 body('startTime', 'Event must have a start time.').notEmpty().trim().escape(), 
-                                body('endTime', 'Event must have an end time.').notEmpty().trim().escape(), body('imageURL', 'Event must have an image.').notEmpty()];
+                                body('endTime', 'Event must have an end time.').notEmpty().trim().escape()];
 
 exports.validateResult = (req, res, next) => {
     let errors = validationResult(req);
@@ -32,8 +32,4 @@ exports.validateResult = (req, res, next) => {
     } else {
         return next();
     }
-};
-
-exports.validateConnection = (req, res, next) => {
-
 };
