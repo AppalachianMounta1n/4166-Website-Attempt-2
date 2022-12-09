@@ -13,7 +13,11 @@ exports.new = (req, res) => {
 //POST /connections - post a new connection to the site
 exports.create = (req, res, next) => {
     let connection = new model(req.body); //create document
-    connection.save().then((connection) => res.redirect('/connections')).catch(err => {
+    connection.host = req.session.user;
+    connection.save().then((connection) => {
+        req.flash('success', 'Event created successfully!');
+        res.redirect('/connections');
+    }).catch(err => {
         if (err.name === "ValidationError") {
             err.status = 400;
         }
@@ -30,7 +34,8 @@ exports.details = (req, res, next) => {
         return next(err);
     };
 
-    let connection = model.findById(id).then(connection => {
+    
+    let connection = model.findById(id).populate("host", "firstName lastName").then(connection => {
         if (connection) {
             res.render('./connections/connection.ejs', {connection});
         } else {

@@ -1,13 +1,12 @@
 <%- include('../partials/header.ejs')%>
-<main>
-    <div id="content">
-        <form action="/users" method="POST">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" minlength="8" required>
-            <button>Login</button>
-        </form>
+    <div id="form">
+        <div id="content">
+            <form action="/users/login" method="POST">
+                <label for="email">Email Addres: <input type="email" id="email" name="email" required></label><br><br>
+                <label for="password">Password: <input type="password" id="password" name="password" minlength="8" required></label><br><br>
+                <button type="submit" id="form-button" formmethod="POST" formaction="/users/login">Login</button>
+            </form>
+        </div>
     </div>
 </main>
 <%- include('../partials/footer.ejs')%>

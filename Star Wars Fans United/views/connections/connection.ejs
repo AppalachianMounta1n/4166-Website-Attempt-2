@@ -1,20 +1,20 @@
 <%- include('../partials/header.ejs')%>
-        <main>
-            <div id="content">
-                <h1><%=connection.title%></h1>
-                <p>Topic: <%=connection.topic%></p>
-                <p>Host: <%=connection.host%></p>
-                <p>Date: <%=connection.date%></p>
-                <p>Start Time: <%=connection.startTime%></p>
-                <p>End Time: <%=connection.endTime%></p>
-                <h2>Details</h2>
-                <p><%=connection.details%></p>
-                <img src="<%=connection.image%>" alt="There is either no image or the URL is invalid." id="connection-img"><br><br>
+    <div id="connection-info">
+        <h1><%=connection.title%></h1>
+        <p>Topic: <%=connection.topic%></p>
+        <p>Host: <%=connection.host%></p>
+        <p>Date: <%=connection.date%></p>
+        <p>Start Time: <%=connection.startTime%></p>
+        <p>End Time: <%=connection.endTime%></p>
+        <h2>Details</h2>
+        <p><%=connection.details%></p>
+        <img src="<%=connection.image%>" alt="There is either no image or the URL is invalid." id="connection-img"><br><br>
 
-                <form>
-                    <button type="submit" id="update" formmethod="GET" formaction="/connections/<%=connection.id%>/edit">Update Event</button>
-                    <button type="submit" id="delete" formmethod="POST" formaction="/connections/<%=connection.id%>?_method=DELETE">Delete Event</button>
-                </form>
-            </div>
-        </main>
+        <form>
+            <button type="submit" id="update" formmethod="GET" formaction="/connections/<%=connection.id%>/edit">Update Event</button>
+            <button type="submit" id="RSVP"formmethod="POST" formaction="/connections/<%= connection.id%>/register">RSVP for This Event</button>
+            <button type="submit" id="delete" formmethod="POST" formaction="/connections/<%=connection.id%>?_method=DELETE">Delete Event</button>
+        </form>
+    </div>
+</main>
 <%- include('../partials/footer.ejs')%>

@@ -108,8 +108,13 @@ footer {
 }
 
 #content {
-    text-align: center;
+    text-align: left;
+    display: inline-block;
     color: rgb(219, 204, 121);
+    margin-top: 10%;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 10%;
 }
 
 #categories {
@@ -185,4 +190,55 @@ input {
     column-gap: 10%;
     column-width: 50%;
     align-items: center;
+}
+
+#form {
+    font-size: 30px;
+}
+
+#form-button {
+    background-color: rgb(219, 204, 121);
+    border: none;
+    width: 150px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error, .success {
+    background: rgb(219, 204, 121);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#profile {
+    font-size: 20px;
+}
+
+#connection-list, #connection-info {
+    display: block;
+    text-align: center;
+    font-size: 120%;
+}
+
+#rsvp-list {
+    color: rgb(219, 204, 121);
+    display: block;
+}
+
+#event-head {
+    font-style: Italic;
+}
+
+#line {
+    border-color: rgb(219, 204, 121);
+    width: 150%;
+    margin-left: -23.5% !important;
 }

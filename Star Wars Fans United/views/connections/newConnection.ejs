@@ -1,5 +1,4 @@
 <%- include('../partials/header.ejs')%>
-        <main>
             <div class="content">
                 <h1>Create a New Event</h1>
                 <form id="new" action="/connections" method="POST">
@@ -8,7 +7,6 @@
                         <option value="Sith Lore">Sith Lore</option></select>
                     </label><br><br>
                     <label for="title">Event Title: <input type="text" id="title" name="title" required></label><br><br>
-                    <label for="host">Event Host: <input type="text" id="host" name="host" required></label><br><br>
                     <label for="details">Event Details: <input type="text" id="details" name="details" required minlength="25"></label><br><br>
                     <label for="date">Event Date: <input type="date" id="date" name="date" placeholder="MM-DD-YYYY" required></label><br><br>
                     <label for="startTime">Event Start Time: <input type="time" id="time" name="startTime" placeholder="HH:MM{AM, am, PM, pm}" required></label><br><br>

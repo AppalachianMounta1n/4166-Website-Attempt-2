@@ -1,4 +1,4 @@
-const {body} = require('express-validator');
+const {body, validationResult} = require('express-validator');
 
 exports.validateId = (req, res, next)=>{
     let id = req.params.id;
@@ -16,6 +16,11 @@ exports.validateSignup = [body('firstName', 'First name cannot be empty.').notEm
 
 exports.validateLogin = [body('email', 'Must be a valid email address.').isEmail().trim().escape().normalizeEmail(), body('password', 'Must be between 8 and 64 characters.').isLength({min: 8, max: 64})];
 
+exports.validateConnection = [body('topic', 'Topic cannot be empty.').notEmpty().trim().escape(), body('title', 'Title cannot be empty.').notEmpty().trim().escape(), 
+                                body('details', 'Details cannot be empty.').notEmpty().trim().escape(), body('date', 'Date cannot be empty.').notEmpty().trim().escape(), 
+                                body('startTime', 'Event must have a start time.').notEmpty().trim().escape(), 
+                                body('endTime', 'Event must have an end time.').notEmpty().trim().escape(), body('imageURL', 'Event must have an image.').notEmpty()];
+
 exports.validateResult = (req, res, next) => {
     let errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -24,8 +29,11 @@ exports.validateResult = (req, res, next) => {
         });
 
         return res.redirect('back');
-    }
-    else {
+    } else {
         return next();
     }
+};
+
+exports.validateConnection = (req, res, next) => {
+
 };

@@ -1,11 +1,9 @@
 <%- include('../partials/header.ejs')%>
-        <main>
             <div class="content">
                 <h1>Edit Connection</h1>
                 <form id="new" method="POST" action="/connections/<%=connection.id%>?_method=PUT">
                     <label for="topic">Event Topic: <input type="text" id="type" name="topic" value="<%=connection.topic%>" required></label><br><br>
                     <label for="title">Event Title: <input type="text" id="title" name="title" value="<%=connection.title%>" required></label><br><br>
-                    <label for="hostname">Event Host: <input type="text" id="host" name="host" value="<%=connection.host%>" required></label><br><br>
                     <label for="details">Event Details: <input type="text" id="details" name="details" value="<%=connection.details%>" required minlength="25"></label><br><br>
                     <label for="date">Event Date: <input type="date" id="date" name="date" value="<%=connection.date%>" required></label><br><br>
                     <label for="startTime">Event Start Time: <input type="time" id="time" name="startTime" value="<%=connection.startTime%>" required></label><br><br>

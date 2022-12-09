@@ -1,14 +1,29 @@
 <%- include('../partials/header.ejs')%>
-<main>
-    <div id="content">
-        <h2><%= user.firstName%> <%= user.lastName%></h2>
-        <% if (connections.length) {%>
-            <p>Hosting The Following Events</p>
-            <% connections.forEach(connection => {%>
-                <a href="'/connections/<%= connection.id%>"><p><%= connection.title%></p></a>
-            <%}); } else {%>
-                <p>You are not hosting any events.</p>
-           <% }%>
+    <div id="profile">
+        <div id="content">
+            <h2><%= user.firstName%> <%= user.lastName%></h2>
+            <% if (connections.length) {%>
+                <p id="event-head">Hosting The Following Events</p>
+                <% connections.forEach(connection => {%>
+                    <a href="'/connections/<%= connection.id%>"><p><%= connection.title%></p></a>
+                <%}); } else {%>
+                    <p>You are not hosting any events.</p>
+               <% }%>
+               
+            <hr id="line">
+            <div id="rsvp-list">
+                <%if (rsvps.length) {%>
+                    <p id="event-head">Attending The Following Events</p>
+                    <ul>
+                        <% rsvps.forEach(rsvp => {%>
+                            <a href="/connections/<%= rsvp.connection%>" id="rsvp-list"><li><p><%= rsvp.connectionName %></p></li></a>
+                        <%})%>
+                    </ul>
+                <%} else {%>
+                    <p>You are not attending any events.</p>
+                <%}%>
+            </div>
+        </div>
     </div>
 </main>
 <%- include('../partials/footer.ejs')%>

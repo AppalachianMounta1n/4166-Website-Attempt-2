@@ -1,5 +1,6 @@
 const model = require('../models/user');
 const Connection = require('../models/connection');
+const RSVP = require('../models/rsvp');
 const {validationResult} = require('express-validator');
 
 exports.new = (req, res)=>{
@@ -32,6 +33,7 @@ exports.getUserLogin = (req, res, next) => {
 }
 
 exports.login = (req, res, next)=>{
+    let email = req.body.email;
     if (email) {
         email = req.body.email.toLowerCase();
     }
@@ -58,9 +60,10 @@ exports.login = (req, res, next)=>{
 
 exports.profile = (req, res, next)=>{
     let id = req.session.user;
-    Promise.all([model.findById(id), Connection.find({host: id})]).then(results => {
-        const [user, connections] = results;
-        res.render('./users/profile', {user, connections});
+    Promise.all([model.findById(id), Connection.find({host: id}), RSVP.find({user: id})]).then(results => {
+        const [user, connections, rsvps] = results;
+        //console.log(rsvps);
+        res.render('./users/profile', {user, connections, rsvps});
     }).catch(err=>next(err));
 };
 
